@@ -42,7 +42,7 @@ const Home = () => {
         className="sm:hidden fixed  bottom-2 right-2 bg-blue1 text-white p-2 rounded z-50"
         onClick={toggleAside}
       >
-        {isAsideVisible ? "Ocultar Categorías" : "Mostrar Categorías"}
+        {isAsideVisible ? <i className='bx bx-menu-alt-left'></i> : <i className='bx bx-menu' ></i>}
       </button>
 
       <div

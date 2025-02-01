@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { CountryProvider } from "./context/CountryContext";
 import App from "./App";
-import { Home, ProductDetail, SelectCountry } from "./pages";
+import { Home, ProductDetail, SelectCountry, Error404 } from "./pages";
 import { VerifyCountry } from "./verifyCountry";
 import ThemeInitializer from "./ThemeInitializer";
 import "./styles/globals.css";
@@ -23,6 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <Route path="product/:id" element={<ProductDetail />} />
             </Route>
           </Route>
+
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </Router>
     </CountryProvider>
