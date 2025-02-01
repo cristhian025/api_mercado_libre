@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-option1: #fff;
+  --color-option2: #d1d1e9;
+  --color-blue1: #4663de;
+
+  /* ------------------------------- */
+  --color-bgbody1: #d1d1e9;
+  --color-txtpage1: #101828;
+  --color-txt1: #aaa9af;
+}
+
+.dark {
+  --color-option1: #313348;
+  --color-option2: #3c3e58;
+  /* ------------------------------- */
+  --color-bgbody1: #3c3e58;
+  --color-txtpage1: #f9f9f9;
+  --color-txt1: #d1d1e9;
+}
+
+body {
+  @apply bg-bgbody1 text-txtpage1;
+}
+
+button{
+  @apply hover:brightness-90 cursor-pointer;
+}
